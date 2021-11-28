@@ -1,0 +1,18 @@
+@import "../../../essentials";
+
+.todo-item {
+  display: flex;
+  width: 500px;
+  align-items: center;
+
+  input {
+    cursor: pointer;
+  }
+  span {
+    margin-left: 10px;
+    font-size: $font-size-todo;
+    font-weight: $font-weight-todo;
+    color: $font-color;
+    cursor: default;
+  }
+}

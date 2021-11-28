@@ -1,0 +1,8 @@
+@import "../../essentials";
+
+.todo-list {
+  margin-top: 25px;
+  background-color: $todo-list-color;
+  border: $border;
+  border-radius: $border-radius;
+}
