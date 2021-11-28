@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import "./style.scss";
 
 interface TodoItemProps {
   todoText?: string;
@@ -9,7 +10,7 @@ interface TodoItemProps {
 export const TodoItem = ({ todoText, checked, id }: TodoItemProps) => {
   const dispatch = useDispatch();
   return (
-    <div>
+    <div className="todo-item">
       <input
         type="checkbox"
         checked={checked}
