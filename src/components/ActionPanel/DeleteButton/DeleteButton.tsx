@@ -7,5 +7,5 @@ export const DeleteButton = () => {
     dispatch({ type: DELETE_TODO });
   };
 
-  return <button onClick={handleClick}>Delete</button>;
+  return <button onClick={handleClick}>Clear Completed</button>;
 };

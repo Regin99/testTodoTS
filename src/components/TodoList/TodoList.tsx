@@ -2,6 +2,7 @@ import { TodoItem } from "./TodoItem/TodoItem";
 import { useAppSelector } from "../../redux/store";
 import "./style.scss";
 import { ToDo } from "../../redux/types";
+import { ActionPanel } from "../ActionPanel/ActionPanel";
 
 export const TodoList = () => {
   const todos = useAppSelector((state) => state);
@@ -16,6 +17,7 @@ export const TodoList = () => {
           id={todo.id}
         />
       ))}
+      <ActionPanel />
     </div>
   );
 };

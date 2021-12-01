@@ -4,10 +4,36 @@
   display: flex;
   width: 500px;
   align-items: center;
+  background-color: $todo-item-color;
+  border-bottom: 1px solid #d3d3d3;
+  padding: 10px;
+  border-radius: $border-radius;
 
-  input {
+  input[type="checkbox"] {
     cursor: pointer;
   }
+
+  input[type="checkbox"] {
+    margin: 0;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #d3d3d3;
+    border-radius: 50%;
+  }
+
+  input[type="checkbox"]:checked {
+    background: linear-gradient(to bottom right, blue, pink);
+  }
+
+  input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+  }
+
+  input[type="checkbox"]:hover {
+    opacity: 0.6;
+  }
+
   span {
     margin-left: 10px;
     font-size: $font-size-todo;

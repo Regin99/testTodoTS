@@ -1,0 +1,22 @@
+@import "../../essentials";
+.input-todo {
+  display: flex;
+  justify-content: space-between;
+  background-color: $todo-item-color;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  padding: 10px;
+  border-radius: $border-radius;
+
+  input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: $font-family;
+    font-size: 1.5em;
+  }
+
+  input::placeholder {
+    opacity: 0.5;
+  }
+}
