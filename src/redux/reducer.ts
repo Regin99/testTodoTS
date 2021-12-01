@@ -20,9 +20,8 @@ const initialState: ToDo[] = [
 ];
 
 const localStorageTodos = localStorage.getItem("todos");
-const persistedState = localStorageTodos
-  ? JSON.parse(localStorageTodos)
-  : initialState;
+const todos = localStorageTodos ? JSON.parse(localStorageTodos) : initialState;
+const persistedState = todos.length > 0 ? todos : initialState;
 
 export const reducer = (state: ToDo[] = persistedState, action: ActionType) => {
   switch (action.type) {
