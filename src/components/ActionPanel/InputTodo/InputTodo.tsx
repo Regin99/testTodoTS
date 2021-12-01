@@ -1,18 +1,16 @@
-import { useState } from "react";
 import { useAppDispatch } from "../../../redux/store";
 import { ADD_TODO } from "../../../redux/actions";
+import { useInputText } from "../../../hooks/useInputText";
 
 export const InputTodo = () => {
-  const [input, setInput] = useState("");
   const dispatch = useAppDispatch();
-
+  const input = useInputText();
   const handleClick = () => {
     dispatch({
       type: ADD_TODO,
-      text: input,
+      text: input.value,
       id: Date.now(),
     });
-    setInput("");
   };
 
   return (
@@ -20,13 +18,14 @@ export const InputTodo = () => {
       <input
         type="text"
         onChange={(e) => {
-          setInput(e.target.value);
+          input.onChange(e);
         }}
-        value={input}
+        value={input.value}
         placeholder="Enter todo"
       />
       <button
         onClick={(e) => {
+          input.clear();
           e.preventDefault();
           handleClick();
         }}>
