@@ -1,13 +1,14 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../../../redux/store";
+import { ADD_TODO } from "../../../redux/actions";
 
 export const InputTodo = () => {
   const [input, setInput] = useState("");
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleClick = () => {
     dispatch({
-      type: "ADD_TODO",
+      type: ADD_TODO,
       text: input,
       id: Date.now(),
     });

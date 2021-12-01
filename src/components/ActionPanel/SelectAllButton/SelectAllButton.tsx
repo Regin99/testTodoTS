@@ -1,9 +1,10 @@
-import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../../../redux/store";
+import { SELECT_ALL } from "../../../redux/actions";
 
 export const SelectAllButton = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const onClick = () => {
-    dispatch({ type: "SELECT_ALL" });
+    dispatch({ type: SELECT_ALL });
   };
 
   return <button onClick={onClick}>Select All</button>;

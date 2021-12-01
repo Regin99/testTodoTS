@@ -1,10 +1,10 @@
-import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../../../redux/store";
+import { DELETE_TODO } from "../../../redux/actions";
 
 export const DeleteButton = () => {
-  const dispatch = useDispatch();
-
+  const dispatch = useAppDispatch();
   const handleClick = () => {
-    dispatch({ type: "DELETE_TODO" });
+    dispatch({ type: DELETE_TODO });
   };
 
   return <button onClick={handleClick}>Delete</button>;
