@@ -1,3 +1,3 @@
 # Deploy
 
-https://zealous-aryabhata-989b45.netlify.app/
+https://regin99.github.io/testTodoTS/
